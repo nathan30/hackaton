@@ -1,0 +1,226 @@
+/***************** CSS RESET *****************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/***************** FONTS *****************/
+
+@font-face {
+    font-family: "brownhill";
+    src: url("../fonts/brownhill.otf");
+}
+@font-face {
+    font-family: "minaxi";
+    src: url("../fonts/minaxi.otf");
+}
+
+/***************** NAVBAR *****************/
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.navbar-nav > li > a{
+    font-family: minaxi,serif;
+    font-size : 25px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.navbar-brand {
+    font-size: 45px;
+    font-family: brownhill,serif;
+    color:#806F80;
+    line-height: 60px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.navbar-default{
+    background-color: white;
+}
+.active{
+
+}
+
+.shrink-text{
+    font-size : 20px!important;
+    line-height: 35px!important;
+}
+.shrink-brand{
+    font-size : 35px!important;
+    line-height: 35px!important;
+}
+
+main{
+    margin-top: 90px;
+}
+
+/***************** RESTAURANT.php *****************/
+    /***************** Le restaurant *****************/
+.restaurant{
+    height: 68vh;
+    background: url("../imgs/restaurant.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.restaurant h2{
+    font-family: 'brownhill', serif;
+    text-align: center;
+    font-size: 100px;
+    color:white;
+    margin-bottom: 50px;
+}
+
+.restaurant p{
+    font-family: 'minaxi', serif;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 23px;
+    color:white;
+    width:70%;
+    margin:auto;
+}
+
+.restaurant h2,
+.restaurant p{
+    margin-top:34%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+    /***************** L'incontournable *****************/
+
+.incontournable{
+    height: 50vh;
+    margin-bottom: 350px;
+}
+.incontournable h2{
+    font-family: 'brownhill', serif;
+    text-align: center;
+    font-size: 100px;
+    color:#806F80;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.incontournable p{
+    font-family: 'minaxi', serif;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 25px;
+    color:#806F80;
+    width:70%;
+    margin:auto;
+}
+
+.incontournable .picture{
+    margin: auto;
+}
+.incontournable .picture img{
+    width: 70%;
+    margin: auto;
+}
+
+.incontournable .texte,
+.incontournable .picture{
+    margin-top:14%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+    /***************** NEWSLETTER *****************/
+
+.newsletter{
+    height: 50vh;
+    background-color: #B9B1B1;
+}
+
+.newsletter form{
+    text-align: center;
+}
+
+.newsletter h2{
+    font-family: 'brownhill', serif;
+    text-align: center;
+    font-size: 100px;
+    color:white;
+    margin-bottom: 50px;
+}
+
+.form-control{
+    height: 66px!important;
+}
+
+.newsletter input[type="submit"]{
+    border: 1px solid white;
+    border-radius: 0;
+    background: transparent;
+    color: white;
+    padding: 15px 25px;
+    font-size:22px;
+    font-family: minaxi, serif;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.newsletter input[type="email"]{
+    background: transparent;
+    padding: 15px 25px;
+    border: 1px solid #806F80;
+    border-radius: 0;
+}
+.newsletter input[type="email"]::placeholder{
+    color:#806F80;
+}
+.newsletter input[type="submit"]:hover{
+    background: #806F80;
+}
