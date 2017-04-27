@@ -11,4 +11,10 @@ class dbconnection{
         $con = mysqli_connect("localhost","root","","hackaton") or die("Couldn't connect");
         return $con;
     }
+    function query($query){
+        $db = new dbconnection();
+        $con = $db ->connect();
+        $result = mysqli_query($con,$query);
+        return $result;
+    }
 }

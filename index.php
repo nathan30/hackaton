@@ -1,4 +1,8 @@
-<?php include_once 'class/dbconnection.php'; ?>
+<?php
+    include_once 'class/dbconnection.php';
+    $db = new dbconnection();
+    $con = $db ->connect();
+?>
 <!DOCTYPE html>
 <html>
 <head>

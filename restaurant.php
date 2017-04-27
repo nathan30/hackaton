@@ -76,7 +76,10 @@
                     <h2>
                         Newsletter
                     </h2>
-                    <form name="newsletter" class="form-inline" action="send_newsletter.php" method="POST">
+                    <p>
+                        Inscrivez vous à notre newsletter afin de recevoir en avant première nos nouvelles cartes saisonnières
+                    </p>
+                    <form name="newsletter" class="form-inline" action="send_newsletter.php" method="POST" autocomplete="off">
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" id="email" placeholder="Entrez votre e-mail">
                         </div>
