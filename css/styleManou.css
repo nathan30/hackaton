@@ -1,0 +1,283 @@
+body{
+    overflow-x: hidden;
+}
+/* PAGE ENTER */
+
+.enter{
+    background-image: url("../imgs/enter2.jpg");
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+    text-align: center;
+    border: 1em solid white;
+    overflow: hidden;
+}
+
+.enter hr{
+    width: 10%;
+    border-color: #806F80;
+    border-width: 2px;
+}
+
+.enter a,
+.enter a:hover,
+.enter a:focus,
+.enter a:visited{
+    text-decoration: none;
+}
+
+.contentEnter{
+    color: white;
+    margin-top: 50vh;
+    transform: translateY(-70%);
+}
+.contentEnter h1{
+    font-size:12vw;
+    padding-top: 80px;
+    font-family: brownhill,serif;
+}
+
+.contentEnter h2{
+    font-style: italic;
+    font-family: minaxi,serif;
+    padding-top: 8px;
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.btn-enter{
+    border: 1px solid white;
+    border-radius: 0;
+    background: transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: white!important;
+    padding: 15px 25px;
+    font-size:22px;
+    font-family: minaxi,serif;
+    opacity: 0;
+}
+
+.btn-enter:hover{
+    background: #806F80;
+}
+
+/***************** MENU PAGE *****************/
+
+.menuFormules,
+.contentFood{
+    height: 60vh;
+    border:0 solid transparent;
+    -webkit-box-shadow: inset 0 0 0 0 #b9b1b1;
+    -moz-box-shadow: inset 0 0 0 0 #b9b1b1;
+    box-shadow: inset 0 0 0 0 #b9b1b1;
+    transition: all .5s ease;
+}
+
+.menuFormules:hover,
+.contentFood:hover{
+    border: 5px solid #b9b1b1;
+    -webkit-box-shadow: inset 0 2px 39px -1px #b9b1b1;
+    -moz-box-shadow: inset 0 2px 39px -1px #b9b1b1;
+    box-shadow: inset 0 2px 39px -1px #b9b1b1;
+}
+
+.contentMenu{
+    font-family: minaxi,serif;
+    text-align: center;
+}
+
+.contentMenu hr{
+    width:18%;
+    margin-top:45px !important;
+
+}
+
+.contentMenu h4{
+    font-weight: bold;
+    font-size: 3.5em;
+    font-family: brownhill,serif;
+    padding-top: 30px;
+    padding-bottom:20px;
+}
+
+.contentMenu p{
+    padding-top:10px;
+}
+
+.descriptMenu{
+    font-size:22px;
+}
+
+.descriptMenu span{
+    font-weight:bold;
+}
+
+.menuPrice{
+    font-weight:bold;
+}
+
+.contentFood{
+    padding:0 80px;
+}
+
+.wrap{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.contentFood ul li{
+    list-style-type: none;
+    line-height: 20px;
+    font-size:15px;
+}
+
+.contentFood ul{
+    text-align: center;
+}
+
+.contentFood hr{
+    margin-top:12px !important;
+}
+
+.contentFood span{
+    font-size:12px;
+    font-style: italic;
+}
+
+.colNoPadding{
+    padding-left: 0 !important;
+    padding-right:0 !important;
+}
+
+.picMenu{
+    background:url('../imgs/formules_2.jpg') no-repeat center center fixed;
+    background-size:cover;
+    height:60vh;
+    background-position: right 0 bottom 51px;
+}
+
+.picEntree, .picEntree2{
+    background:url('../imgs/Nougat-au-fromage-de-che¦Çvre-et-pistache-1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    height: 60vh;
+    background-position: left 325px top -80px;
+}
+
+.picPlat{
+    background:url('../imgs/Nem-de-boudin-noir-aux-pommes-2.jpg') no-repeat center center fixed;
+    background-size:cover;
+    height:60vh;
+    background-position: right 471px top -174px;
+}
+
+.picDessert, .picDessert2{
+    background:url('../imgs/Soupe-dananas.jpg') no-repeat center center fixed;
+    background-size:cover;
+    height:60vh;
+
+}
+
+@media screen and (min-width:1285px){
+    .picEntree2{
+        display: none;
+    }
+
+    .picDessert2{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .contentMenu .col-md-6{
+        width:100% !important;
+    }
+
+    .picEntree{
+        display: none;
+    }
+
+    .picDessert{
+        display: none;
+    }
+
+    .contentFood ul li{
+        font-size:18px;
+    }
+
+    .contentFood ul{
+        padding-bottom:40px;
+    }
+
+    .contentFormules{
+        padding-bottom:30px;
+    }
+
+    .picMenu, .picEntree2, .picPlat{
+        background-position: 0;
+    }
+}
+@media (max-width: 768px){
+    .menuFormules,
+    .contentFood{
+        height: inherit;
+        min-height: 60vh;
+    }
+}
+
+/***************** VINS PAGE *****************/
+
+.picVinsRouge{
+    background:url('../imgs/vins-rouges.jpg') no-repeat center center fixed;
+    background-size:cover;
+    height:60vh;
+}
+
+.picRose{
+    background:url('../imgs/vins-rose.jpg') no-repeat fixed;
+    background-size:cover;
+    height:60vh;
+}
+
+.picRose2{
+    background:url('../imgs/vins-rose.jpg') no-repeat fixed;
+    background-size:cover;
+    height:60vh;
+}
+
+.picBlanc{
+    background:url('../imgs/vins-blanc.jpg') no-repeat fixed;
+    background-size:cover;
+    height:60vh;
+}
+
+.picChampagne{
+    background:url('../imgs/vins-champagne.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 60vh;
+}
+
+.picChampagne2{
+    background:url('../imgs/vins-champagne.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 60vh;
+}
+
+@media screen and (min-width:1285px){
+    .picRose2,.picChampagne2{
+        display: none;
+    }
+}
+@media screen and (max-width: 1280px){
+    .picRose,.picChampagne{
+        display: none;
+    }
+}

@@ -1,0 +1,167 @@
+/***************** RESETS *****************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+main{
+    margin-top: 70px;
+}
+.enter{
+    margin-top: 0;
+}
+
+/***************** FONTS *****************/
+
+@font-face {
+    font-family: "brownhill";
+    src: url("../fonts/brownhill.otf");
+}
+@font-face {
+    font-family: "minaxi";
+    src: url("../fonts/minaxi.otf");
+}
+
+
+/***************** NAVBAR *****************/
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.navbar-nav > li > a{
+    font-family: minaxi,serif;
+    font-size : 25px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.navbar-brand {
+    font-size: 45px;
+    font-family: brownhill,serif;
+    color:#B9B1B1;
+    line-height: 40px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.navbar-default{
+    background-color: white;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a{
+    background-color: transparent!important;
+}
+
+.shrink-text{
+    font-size : 20px!important;
+    line-height: 35px!important;
+}
+.shrink-brand{
+    font-size : 35px!important;
+    line-height: 35px!important;
+}
+
+/***************** Animate a element of menu *****************/
+.navbar-nav > li > a {
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-nav > li > a:hover {
+    color: #806F80;
+}
+.navbar-nav > li > a:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -2px;
+    left: 0;
+    background-color: #806F80;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.navbar-nav > li > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+@media only screen and (max-width : 480px) {
+    body {
+        overflow-x: hidden;
+        margin: -6px;
+    }
+    main {
+        margin-top: 55px;
+    }
+
+    .navbar-brand {
+        line-height: 20px !important;
+        font-size: 30px !important;
+        text-align: center;
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width : 915px) {
+    .navbar-brand,
+    .nav li a{
+        font-size : 20px;
+        line-height: 35px;
+        color:#806F80;
+    }
+    .shrink-text {
+        font-size: 15px!important;
+        line-height: 35px!important;
+    }
+}
+

@@ -8,7 +8,7 @@
  */
 class dbconnection{
     function connect(){
-        $con = mysqli_connect("localhost","root","","hackaton") or die("Couldn't connect");
+        $con = mysqli_connect("localhost","aokamifrbahacka","Hackanatman1","aokamifrbahacka") or die("Couldn't connect");
         return $con;
     }
     function query($query){

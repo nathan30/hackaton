@@ -1,135 +1,3 @@
-/***************** CSS RESET *****************/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/***************** FONTS *****************/
-
-@font-face {
-    font-family: "brownhill";
-    src: url("../fonts/brownhill.otf");
-}
-@font-face {
-    font-family: "minaxi";
-    src: url("../fonts/minaxi.otf");
-}
-
-/***************** NAVBAR *****************/
-
-.navbar{
-    margin-bottom: 0;
-}
-
-.navbar-nav > li > a{
-    font-family: minaxi,serif;
-    font-size : 25px;
-    font-weight: bold;
-    line-height: 40px;
-    padding-right: 30px;
-    padding-left: 30px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-.navbar-brand {
-    font-size: 45px;
-    font-family: brownhill,serif;
-    color:#B9B1B1;
-    line-height: 40px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-
-.navbar-default{
-    background-color: white;
-}
-
-.navbar-default .navbar-nav > .active > a{
-    background-color: transparent!important;
-}
-
-.shrink-text{
-    font-size : 20px!important;
-    line-height: 35px!important;
-}
-.shrink-brand{
-    font-size : 35px!important;
-    line-height: 35px!important;
-}
-
-main{
-    margin-top: 70px;
-}
-    /***************** Animate a element of menu *****************/
-.navbar-nav > li > a {
-    position: relative;
-    text-decoration: none;
-}
-
-.navbar-nav > li > a:hover {
-    color: #806F80;
-}
-.navbar-nav > li > a:before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: -2px;
-    left: 0;
-    background-color: #806F80;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-.navbar-nav > li > a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-
 /***************** RESTAURANT.php *****************/
     /***************** Le restaurant *****************/
 html {
@@ -218,8 +86,9 @@ html {
     /***************** NEWSLETTER *****************/
 
 .newsletter{
-    min-height: 50vh;
+    min-height: 30vh;
     background-color: #B9B1B1;
+    padding-bottom: 20px;
 }
 
 .newsletter form{
@@ -266,6 +135,8 @@ html {
 
 .newsletter input[type="email"]{
     background: transparent;
+    font-family: minaxi,serif;
+    font-weight: bold;
     padding: 15px 25px;
     border: 1px solid #806F80;
     margin-right: 20px;
@@ -293,6 +164,31 @@ html {
     box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
 }
 
+#newsletterSuccess{
+    display: none;
+    width: 20%;
+    position: fixed;
+    top: 10%;
+    z-index: 9999;
+    background-color: #B9B1B1;
+    right: 0;
+}
+#newsletterExist,
+#newsletterError{
+    display: none;
+    width: 20%;
+    position: fixed;
+    top: 10%;
+    z-index: 9999;
+    background-color: #806F80;
+    right: 0;
+}
+#newsletterSuccess p,
+#newsletterError p,
+#newsletterExist p{
+    text-align: center;
+}
+
 
 /***************** INFOS PRATIQUE *****************/
     /***************** Contact Form *****************/
@@ -303,6 +199,7 @@ html {
 
 .contact{
     margin-top: 70px;
+    margin-bottom: 20px;
 }
 .contact hr{
     display: none;
@@ -319,7 +216,7 @@ html {
     text-align: center;
     font-size: 15px;
     font-style: italic;
-    margin-top: 30px;
+    margin-top: 50px;
     color:white;
 }
 
@@ -344,14 +241,14 @@ html {
 .contact input[type="email"],
 .contact textarea{
     background: transparent!important;
-    padding: 15px 25px!important;;
-    border: 1px solid #806F80!important;;
-    margin-right: 20px!important;;
-    border-radius: 0!important;;
-    color: #806F80!important;;
-    -webkit-box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;;
-    -moz-box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;;
-    box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;;
+    padding: 15px 25px!important;
+    border: 1px solid #806F80!important;
+    margin-right: 20px!important;
+    border-radius: 0!important;
+    color: #806F80!important;
+    -webkit-box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;
+    -moz-box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;
+    box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -387,8 +284,8 @@ html {
 .contact input[type="email"]:focus,
 textarea:focus{
     -webkit-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;
-    -moz-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;;
-    box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;;
+    -moz-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;
+    box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;
 }
 
     /***************** Nous retrouver *****************/
@@ -399,17 +296,50 @@ textarea:focus{
     color:white;
     margin-top: 50px;
 }
+.contact a{
+    text-decoration: none;
+    color:#806F80;
+    font-weight: bold;
+}
+
+.contact .maps{
+    margin-top: 50px;
+    text-align: center;
+}
+.contact .maps img{
+    width: 50%;
+}
 
 /***************** MEDIA QUERIES*****************/
 
 
 @media only screen and (max-width : 480px) {
-    body{
-        overflow-x: hidden;
-        margin: -6px;
-    }
-    .restaurant{
+    .restaurant,
+    .incontournable .wrap{
         display: block;
+    }
+    .restaurant h2{
+        margin-top: 50px;
+    }
+    .restaurant p{
+        width:100%;
+        margin-bottom: 50px;
+        padding:10px;
+        background: rgba(255,255,255,0.3);
+    }
+    .incontournable{
+        margin-bottom: 50px;
+    }
+    .incontournable h2{
+        font-size: 80px;
+    }
+    .incontournable p{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .contact form{
+        width: 100%;
     }
 }
 
@@ -421,11 +351,5 @@ textarea:focus{
         display: block;
         width: 50%;
         border-color:#806F80;
-    }
-    .navbar-brand,
-    .nav li a{
-        font-size : 20px!important;
-        line-height: 35px!important;
-        color:#806F80;
     }
 }
