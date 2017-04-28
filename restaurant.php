@@ -1,4 +1,7 @@
-<?php include_once 'class/dbconnection.php'; ?>
+<?php
+    include_once 'class/dbconnection.php';
+    $db = new dbconnection();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +17,8 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -81,14 +86,48 @@
                     <p>
                         Inscrivez vous à notre newsletter afin de recevoir en avant première nos nouvelles cartes saisonnières
                     </p>
-                    <form name="newsletter" class="form-inline" action="send_newsletter.php" method="POST" autocomplete="off">
+                    <form name="newsletter" class="form-inline" action="restaurant.php" method="POST" autocomplete="off">
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" id="email" placeholder="Entrez votre e-mail">
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="form-control" value="Inscrivez vous !">
+                            <input type="submit" name="submit" class="form-control" value="Inscrivez vous !">
                         </div>
                     </form>
+                    <div id='newsletterSuccess'><p>Votre inscription est bien confirmée</p></div>
+                    <div id='newsletterError'><p>Erreur lors de l'inscription</p></div>
+                    <div id='newsletterExist'><p>Votre adresse existe déjà dans notre base de données clients</p></div>
+                    <?php
+                        if(isset($_POST['submit'])){
+                            if($_POST['email'] != ''){
+                                $error = 0;
+                                $email = $_POST['email'];
+                                $queryEmail = "SELECT email FROM user";
+                                $checkEmail = $db -> query($queryEmail);
+                                $result = $checkEmail -> fetch_all(MYSQLI_ASSOC);
+                                for($i = 0; $i < count($result); $i++){
+                                    foreach($result[$i] as $key => $value){
+                                        if($value == $email){
+                                            echo "<script>displayPopup('exist')</script>";
+                                            $error = 1;
+                                            exit();
+                                        }else{
+                                            $error = 0;
+                                        }
+                                    }
+                                }
+                                if($error == 0){
+                                    $query = "INSERT INTO user(email) VALUES('". $email . "')";
+                                    $stmt = $db ->query($query);
+                                    if($stmt){
+                                        echo "<script>displayPopup('success')</script>";
+                                    }else{
+                                        echo "<script>displayPopup('error')</script>";
+                                    }
+                                }
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
