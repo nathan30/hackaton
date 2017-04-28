@@ -65,7 +65,7 @@ table {
     font-family: minaxi,serif;
     font-size : 25px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 40px;
     padding-right: 30px;
     padding-left: 30px;
     -webkit-transition: all 0.4s ease;
@@ -75,7 +75,7 @@ table {
     font-size: 45px;
     font-family: brownhill,serif;
     color:#B9B1B1;
-    line-height: 60px;
+    line-height: 40px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
@@ -83,8 +83,9 @@ table {
 .navbar-default{
     background-color: white;
 }
-.active{
 
+.navbar-default .navbar-nav > .active > a{
+    background-color: transparent!important;
 }
 
 .shrink-text{
@@ -97,7 +98,7 @@ table {
 }
 
 main{
-    margin-top: 90px;
+    margin-top: 70px;
 }
     /***************** Animate a element of menu *****************/
 .navbar-nav > li > a {
@@ -108,12 +109,12 @@ main{
 .navbar-nav > li > a:hover {
     color: #806F80;
 }
-.navbar-nav > li > a:before {
+.navbar-nav > li > a:before{
     content: "";
     position: absolute;
     width: 100%;
     height: 4px;
-    bottom: 86px;
+    bottom: -2px;
     left: 0;
     background-color: #806F80;
     visibility: hidden;
@@ -131,10 +132,23 @@ main{
 
 /***************** RESTAURANT.php *****************/
     /***************** Le restaurant *****************/
+html {
+    margin:0;
+}
+
 .restaurant{
-    height: 68vh;
+    min-height: 68vh;
     background: url("../imgs/restaurant.jpg") no-repeat center center fixed;
     background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 .restaurant h2{
@@ -155,21 +169,25 @@ main{
     margin:auto;
 }
 
-.restaurant h2,
-.restaurant p{
-    margin-top:34%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
     /***************** L'incontournable *****************/
 
 .incontournable{
-    height: 50vh;
-    margin-bottom: 350px;
+    min-height: 50vh;
+    margin-bottom: 100px;
 }
+
+.incontournable .wrap{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 .incontournable h2{
     font-family: 'brownhill', serif;
     text-align: center;
@@ -197,19 +215,10 @@ main{
     margin: auto;
 }
 
-.incontournable .texte,
-.incontournable .picture{
-    margin-top:14%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
     /***************** NEWSLETTER *****************/
 
 .newsletter{
-    height: 50vh;
+    min-height: 50vh;
     background-color: #B9B1B1;
 }
 
@@ -222,6 +231,7 @@ main{
     text-align: center;
     font-size: 100px;
     color:white;
+    margin-top: 50px;
 }
 .newsletter p{
     font-family: 'minaxi', serif;
@@ -235,7 +245,7 @@ main{
     margin-top: 25px;
 }
 
-.form-control{
+.newsletter .form-control{
     height: 66px!important;
 }
 
@@ -269,6 +279,7 @@ main{
 }
 .newsletter input[type="email"]::placeholder{
     color:white;
+    font-family: minaxi,serif;
 }
 .newsletter input[type="submit"]:hover{
     background: #806F80;
@@ -280,4 +291,141 @@ main{
     -webkit-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
     -moz-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
     box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
+}
+
+
+/***************** INFOS PRATIQUE *****************/
+    /***************** Contact Form *****************/
+
+#contact{
+    background-color:#B9B1B1;
+}
+
+.contact{
+    margin-top: 70px;
+}
+.contact hr{
+    display: none;
+}
+.contact h2{
+    font-family: 'brownhill', serif;
+    text-align: center;
+    font-size: 100px;
+    color:white;
+}
+
+.contact h3{
+    font-family: 'minaxi', serif;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 30px;
+    color:white;
+}
+
+.contact .col-md-6:first-child{
+    border-right:1px solid #806F80;
+}
+
+.contact form{
+    width: 50%;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contact form label{
+    margin-bottom: 10px;
+    font-family: minaxi,serif;
+    color:white;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea{
+    background: transparent!important;
+    padding: 15px 25px!important;;
+    border: 1px solid #806F80!important;;
+    margin-right: 20px!important;;
+    border-radius: 0!important;;
+    color: #806F80!important;;
+    -webkit-box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;;
+    -moz-box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;;
+    box-shadow: 0 0 0 0 rgba(128,111,128,1)!important;;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.contact textarea{
+    resize: vertical;
+}
+.contact input[type="submit"]{
+    border: 1px solid white;
+    border-radius: 0;
+    background: transparent;
+    color: white;
+    padding: 15px 25px;
+    font-size:22px;
+    font-family: minaxi, serif;
+    -webkit-box-shadow: 0 0 0 0 rgba(128,111,128,1);
+    -moz-box-shadow: 0 0 0 0 rgba(128,111,128,1);
+    box-shadow: 0 0 0 0 rgba(128,111,128,1);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.contact input[type="submit"]:hover{
+    background: #806F80;
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
+    box-shadow: 5px 5px 5px 0 rgba(128,111,128,1);
+}
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+textarea:focus{
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;
+    -moz-box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;;
+    box-shadow: 5px 5px 5px 0 rgba(128,111,128,1)!important;;
+}
+
+    /***************** Nous retrouver *****************/
+
+.contact p{
+    text-align: center;
+    font-family: minaxi,serif;
+    color:white;
+    margin-top: 50px;
+}
+
+/***************** MEDIA QUERIES*****************/
+
+
+@media only screen and (max-width : 480px) {
+    body{
+        overflow-x: hidden;
+        margin: -6px;
+    }
+    .restaurant{
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 915px) {
+    .contact .col-md-6:first-child{
+        border-right:0;
+    }
+    .contact hr{
+        display: block;
+        width: 50%;
+        border-color:#806F80;
+    }
+    .navbar-brand,
+    .nav li a{
+        font-size : 20px!important;
+        line-height: 35px!important;
+        color:#806F80;
+    }
 }

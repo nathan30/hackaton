@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
     <header>
@@ -44,12 +44,12 @@
     <main>
         <div class="container-fluid">
             <div class="row restaurant">
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
                     <h2>
                         Le restaurant
                     </h2>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
                     <p>
                         Au coeur du quartier Saint-Roch à Montpellier, l’Alchimiste vous accueille tous les soirs du lundi au samedi et propose une cuisine traditionnelle et de saison.
                         Depuis 15 ans, Nadia et Bruno Tendey se donnent corps et âme afin d’offrir à leurs clients une véritable expérience le temps d’un dîner et ont a coeur de proposer une carte de plats faits maison.
@@ -61,14 +61,16 @@
                 <h2>
                     L'incontournable
                 </h2>
-                <div class="col-md-6 texte">
-                    <p>
-                        L’Alchimiste a son plat emblématique : le Fondu de camembert, framboises, échalotes, salade de jeunes pousses, huile au curry.
-                        Tout au long de l'année, ce met saura ravir votre palet entre saveurs du terroir et du marché.
-                    </p>
-                </div>
-                <div class="col-md-6 picture">
-                    <img src="imgs/camembert.jpg" alt="Camembert à la framboise" class="img-responsive">
+                <div class="wrap">
+                    <div class="col-md-6 col-xs-12 texte">
+                        <p>
+                            L’Alchimiste a son plat emblématique : le Fondu de camembert, framboises, échalotes, salade de jeunes pousses, huile au curry.
+                            Tout au long de l'année, ce met saura ravir votre palet entre saveurs du terroir et du marché.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-xs-12 picture">
+                        <img src="imgs/camembert.jpg" alt="Camembert à la framboise" class="img-responsive">
+                    </div>
                 </div>
             </div>
             <div class="row newsletter">
